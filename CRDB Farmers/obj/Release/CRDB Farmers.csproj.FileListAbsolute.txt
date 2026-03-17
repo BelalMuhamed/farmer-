@@ -1,0 +1,54 @@
+C:\Users\b.zakaria\Desktop\CRDB Farmers Sol\CRDB Farmers Sol\CRDB Farmers\bin\Release\CRDB Farmers.exe.config
+C:\Users\b.zakaria\Desktop\CRDB Farmers Sol\CRDB Farmers Sol\CRDB Farmers\bin\Release\CRDB Farmers.exe
+C:\Users\b.zakaria\Desktop\CRDB Farmers Sol\CRDB Farmers Sol\CRDB Farmers\bin\Release\CRDB Farmers.pdb
+C:\Users\b.zakaria\Desktop\CRDB Farmers Sol\CRDB Farmers Sol\CRDB Farmers\bin\Release\ClosedXML.dll
+C:\Users\b.zakaria\Desktop\CRDB Farmers Sol\CRDB Farmers Sol\CRDB Farmers\bin\Release\ClosedXML.Parser.dll
+C:\Users\b.zakaria\Desktop\CRDB Farmers Sol\CRDB Farmers Sol\CRDB Farmers\bin\Release\DocumentFormat.OpenXml.dll
+C:\Users\b.zakaria\Desktop\CRDB Farmers Sol\CRDB Farmers Sol\CRDB Farmers\bin\Release\DocumentFormat.OpenXml.Framework.dll
+C:\Users\b.zakaria\Desktop\CRDB Farmers Sol\CRDB Farmers Sol\CRDB Farmers\bin\Release\ExcelDataReader.DataSet.dll
+C:\Users\b.zakaria\Desktop\CRDB Farmers Sol\CRDB Farmers Sol\CRDB Farmers\bin\Release\ExcelDataReader.dll
+C:\Users\b.zakaria\Desktop\CRDB Farmers Sol\CRDB Farmers Sol\CRDB Farmers\bin\Release\ExcelNumberFormat.dll
+C:\Users\b.zakaria\Desktop\CRDB Farmers Sol\CRDB Farmers Sol\CRDB Farmers\bin\Release\Microsoft.Bcl.HashCode.dll
+C:\Users\b.zakaria\Desktop\CRDB Farmers Sol\CRDB Farmers Sol\CRDB Farmers\bin\Release\RBush.dll
+C:\Users\b.zakaria\Desktop\CRDB Farmers Sol\CRDB Farmers Sol\CRDB Farmers\bin\Release\SixLabors.Fonts.dll
+C:\Users\b.zakaria\Desktop\CRDB Farmers Sol\CRDB Farmers Sol\CRDB Farmers\bin\Release\System.Buffers.dll
+C:\Users\b.zakaria\Desktop\CRDB Farmers Sol\CRDB Farmers Sol\CRDB Farmers\bin\Release\System.Drawing.Common.dll
+C:\Users\b.zakaria\Desktop\CRDB Farmers Sol\CRDB Farmers Sol\CRDB Farmers\bin\Release\System.Memory.dll
+C:\Users\b.zakaria\Desktop\CRDB Farmers Sol\CRDB Farmers Sol\CRDB Farmers\bin\Release\System.Numerics.Vectors.dll
+C:\Users\b.zakaria\Desktop\CRDB Farmers Sol\CRDB Farmers Sol\CRDB Farmers\bin\Release\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\b.zakaria\Desktop\CRDB Farmers Sol\CRDB Farmers Sol\CRDB Farmers\bin\Release\System.Text.Encoding.CodePages.dll
+C:\Users\b.zakaria\Desktop\CRDB Farmers Sol\CRDB Farmers Sol\CRDB Farmers\bin\Release\ClosedXML.pdb
+C:\Users\b.zakaria\Desktop\CRDB Farmers Sol\CRDB Farmers Sol\CRDB Farmers\bin\Release\ClosedXML.xml
+C:\Users\b.zakaria\Desktop\CRDB Farmers Sol\CRDB Farmers Sol\CRDB Farmers\bin\Release\ClosedXML.Parser.xml
+C:\Users\b.zakaria\Desktop\CRDB Farmers Sol\CRDB Farmers Sol\CRDB Farmers\bin\Release\DocumentFormat.OpenXml.xml
+C:\Users\b.zakaria\Desktop\CRDB Farmers Sol\CRDB Farmers Sol\CRDB Farmers\bin\Release\DocumentFormat.OpenXml.Framework.xml
+C:\Users\b.zakaria\Desktop\CRDB Farmers Sol\CRDB Farmers Sol\CRDB Farmers\bin\Release\ExcelDataReader.pdb
+C:\Users\b.zakaria\Desktop\CRDB Farmers Sol\CRDB Farmers Sol\CRDB Farmers\bin\Release\ExcelDataReader.xml
+C:\Users\b.zakaria\Desktop\CRDB Farmers Sol\CRDB Farmers Sol\CRDB Farmers\bin\Release\ExcelDataReader.DataSet.pdb
+C:\Users\b.zakaria\Desktop\CRDB Farmers Sol\CRDB Farmers Sol\CRDB Farmers\bin\Release\ExcelDataReader.DataSet.xml
+C:\Users\b.zakaria\Desktop\CRDB Farmers Sol\CRDB Farmers Sol\CRDB Farmers\bin\Release\ExcelNumberFormat.xml
+C:\Users\b.zakaria\Desktop\CRDB Farmers Sol\CRDB Farmers Sol\CRDB Farmers\bin\Release\Microsoft.Bcl.HashCode.xml
+C:\Users\b.zakaria\Desktop\CRDB Farmers Sol\CRDB Farmers Sol\CRDB Farmers\bin\Release\RBush.xml
+C:\Users\b.zakaria\Desktop\CRDB Farmers Sol\CRDB Farmers Sol\CRDB Farmers\bin\Release\SixLabors.Fonts.xml
+C:\Users\b.zakaria\Desktop\CRDB Farmers Sol\CRDB Farmers Sol\CRDB Farmers\bin\Release\System.Buffers.xml
+C:\Users\b.zakaria\Desktop\CRDB Farmers Sol\CRDB Farmers Sol\CRDB Farmers\bin\Release\System.Drawing.Common.pdb
+C:\Users\b.zakaria\Desktop\CRDB Farmers Sol\CRDB Farmers Sol\CRDB Farmers\bin\Release\System.Drawing.Common.xml
+C:\Users\b.zakaria\Desktop\CRDB Farmers Sol\CRDB Farmers Sol\CRDB Farmers\bin\Release\System.Memory.xml
+C:\Users\b.zakaria\Desktop\CRDB Farmers Sol\CRDB Farmers Sol\CRDB Farmers\bin\Release\System.Numerics.Vectors.xml
+C:\Users\b.zakaria\Desktop\CRDB Farmers Sol\CRDB Farmers Sol\CRDB Farmers\bin\Release\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\b.zakaria\Desktop\CRDB Farmers Sol\CRDB Farmers Sol\CRDB Farmers\bin\Release\System.Text.Encoding.CodePages.xml
+C:\Users\b.zakaria\Desktop\CRDB Farmers Sol\CRDB Farmers Sol\CRDB Farmers\obj\Release\CRDB Farmers.csproj.AssemblyReference.cache
+C:\Users\b.zakaria\Desktop\CRDB Farmers Sol\CRDB Farmers Sol\CRDB Farmers\obj\Release\CRDB Farmers.csproj.SuggestedBindingRedirects.cache
+C:\Users\b.zakaria\Desktop\CRDB Farmers Sol\CRDB Farmers Sol\CRDB Farmers\obj\Release\CRDB Farmers.exe.config
+C:\Users\b.zakaria\Desktop\CRDB Farmers Sol\CRDB Farmers Sol\CRDB Farmers\obj\Release\CRDB Farmers.csproj.ResolveComReference.cache
+C:\Users\b.zakaria\Desktop\CRDB Farmers Sol\CRDB Farmers Sol\CRDB Farmers\obj\Release\MainWindow.baml
+C:\Users\b.zakaria\Desktop\CRDB Farmers Sol\CRDB Farmers Sol\CRDB Farmers\obj\Release\MainWindow.g.cs
+C:\Users\b.zakaria\Desktop\CRDB Farmers Sol\CRDB Farmers Sol\CRDB Farmers\obj\Release\App.g.cs
+C:\Users\b.zakaria\Desktop\CRDB Farmers Sol\CRDB Farmers Sol\CRDB Farmers\obj\Release\CRDB Farmers_MarkupCompile.cache
+C:\Users\b.zakaria\Desktop\CRDB Farmers Sol\CRDB Farmers Sol\CRDB Farmers\obj\Release\CRDB Farmers.g.resources
+C:\Users\b.zakaria\Desktop\CRDB Farmers Sol\CRDB Farmers Sol\CRDB Farmers\obj\Release\CRDB_Farmers.Properties.Resources.resources
+C:\Users\b.zakaria\Desktop\CRDB Farmers Sol\CRDB Farmers Sol\CRDB Farmers\obj\Release\CRDB Farmers.csproj.GenerateResource.cache
+C:\Users\b.zakaria\Desktop\CRDB Farmers Sol\CRDB Farmers Sol\CRDB Farmers\obj\Release\CRDB Farmers.csproj.CoreCompileInputs.cache
+C:\Users\b.zakaria\Desktop\CRDB Farmers Sol\CRDB Farmers Sol\CRDB Farmers\obj\Release\CRDB Far.F246ED96.Up2Date
+C:\Users\b.zakaria\Desktop\CRDB Farmers Sol\CRDB Farmers Sol\CRDB Farmers\obj\Release\CRDB Farmers.exe
+C:\Users\b.zakaria\Desktop\CRDB Farmers Sol\CRDB Farmers Sol\CRDB Farmers\obj\Release\CRDB Farmers.pdb
