@@ -84,142 +84,67 @@ namespace CRDB_Farmers
 
         #endregion
 
+       
         #region ProcessData
 
+        
         private async void ProcessFiles_Click(object sender, RoutedEventArgs e)
         {
             string errorMessage = "";
             DataComparisonResult _comparisonResult = new DataComparisonResult();
             List<EmbossingDto> ListEmbosing = new List<EmbossingDto>();
-            #region GetDataFromFiles
+
             using (var dialog = new FolderBrowserDialog())
             {
-                #region Choose Path to save 
                 dialog.Description = "Choose a folder to save output images";
                 dialog.ShowNewFolderButton = true;
 
-                var result = dialog.ShowDialog();
+                if (dialog.ShowDialog() != System.Windows.Forms.DialogResult.OK || string.IsNullOrWhiteSpace(dialog.SelectedPath))
+                    return;
 
-                if (result != System.Windows.Forms.DialogResult.OK || string.IsNullOrWhiteSpace(dialog.SelectedPath))
-                {
-                    return; 
-                }
-                processButton.IsEnabled=false;
+                processButton.IsEnabled = false;
                 string savePath = dialog.SelectedPath;
-                #endregion
 
-                #region read excel file data 
+                // 1️⃣ Read Excel
                 ExcelFileData = Excel.ReadExcelAsList<ExcelDto>(ExcelFilePath);
-                #endregion
-
-                #region handle if no data in excel file 
                 if (ExcelFileData.Count == 0)
                 {
                     LoadingBar.Visibility = Visibility.Collapsed;
-                    errorMessage = "There isn't any data in excel file !";
-                    ErrorLabel.Content = errorMessage;
+                    ErrorLabel.Content = "There isn't any data in excel file !";
                     ErrorLabel.Visibility = Visibility.Visible;
                     return;
                 }
-                #endregion
 
-                #region create folders
+                // 2️⃣ Create folders for images
                 FarmerImagesPath = Folder.CreateFolder(savePath, "FarmerImages");
                 QrCodeImagesPath = Folder.CreateFolder(savePath, "QrCodeImages");
-                #endregion
 
-                #region controls
+                // 3️⃣ UI feedback
                 ErrorLabel.Visibility = Visibility.Collapsed;
                 SuccessLabel.Visibility = Visibility.Collapsed;
                 LoadingBar.Visibility = Visibility.Visible;
-                #endregion
-
-                #region Handle farmer images  
-                await Task.Run(() =>
-                {
-                    for (int i = 0; i < ExcelFileData.Count; i++)
-                    {
-                         if(string.IsNullOrEmpty(ExcelFileData[i].FarmerImage))
-                         {
-                            _comparisonResult.AddExcelRecord(ExcelFileData[i].AccountNumber, "There isn't farmer image ");
-                            continue;
-
-                        }
-                        try
-                        {
-                            image.ForceConvertBase64ToPng(ExcelFileData[i].FarmerImage, FarmerImagesPath, ExcelFileData[i].AccountNumber, ref errorMessage);
-
-                        }
-                        catch (Exception ex)
-                        {
-                            _comparisonResult.AddExcelRecord(ExcelFileData[i].AccountNumber, $"Cann't Proccess farmer  image because {ex.Message}");
-                            continue;
-                        }
-
-
-                    }
-                });
-                #endregion
-
-                #region Handle QrCodeImage
-                await Task.Run(() =>
-                {
-                    for (int i = 0; i < ExcelFileData.Count; i++)
-                    {
-                        if (string.IsNullOrEmpty(ExcelFileData[i].FarmerImage))
-                        {
-                            _comparisonResult.AddExcelRecord(ExcelFileData[i].AccountNumber, "There isn't farmer image ");
-                            continue;
-
-
-                        }
-
-                        try
-                        {
-                            image.ForceConvertBase64ToPng(ExcelFileData[i].QRCode, QrCodeImagesPath, ExcelFileData[i].AccountNumber, ref errorMessage);
-
-                        }
-                        catch (Exception ex)
-                        {
-                            _comparisonResult.AddExcelRecord(ExcelFileData[i].AccountNumber, $"Cann't Proccess Qr code image because {ex.Message}");
-                            continue;
-                        }
-
-                    }
-                });
-                #endregion
 
                 #region Handle Embossing File
-                await Task.Run(() =>
+                try
                 {
-
-                    try
+                    var EmbossingFileRecords = EmbossingFile.GetEmbossingFileData(EmbossingFilePath);
+                    if (EmbossingFileRecords.Length == 0)
                     {
-                        var EmbossingFileRecords = EmbossingFile.GetEmbossingFileData(EmbossingFilePath);
-                        if(EmbossingFileRecords.Length ==0)
-                        {
-                            LoadingBar.Visibility = Visibility.Collapsed;
-                            errorMessage = "There isn't any data in Embossing file !";
-                            ErrorLabel.Content = errorMessage;
-                            ErrorLabel.Visibility = Visibility.Visible;
-
-                            return;
-                        }
-
-                         ListEmbosing = EmbossingFile.Parse(EmbossingFileRecords, EmbossingFile.FileRecordsDataInBytes ,ref _comparisonResult);
-                       
-                    }
-                    catch (Exception ex)
-                    {
-                        errorMessage += $" {ex.Message}\n";
+                        LoadingBar.Visibility = Visibility.Collapsed;
+                        ErrorLabel.Content = "There isn't any data in Embossing file !";
+                        ErrorLabel.Visibility = Visibility.Visible;
+                        return;
                     }
 
-                });
+                    ListEmbosing = EmbossingFile.Parse(EmbossingFileRecords, EmbossingFile.FileRecordsDataInBytes, ref _comparisonResult);
+                }
+                catch (Exception ex)
+                {
+                    errorMessage += $" {ex.Message}\n";
+                }
                 #endregion
 
-                #region comparisonFileData
-
-
+                #region Comparison (Common + Failed)
                 try
                 {
                     ProcessFilesData.ProcessFiles(ListEmbosing, ExcelFileData, ref _comparisonResult);
@@ -232,25 +157,101 @@ namespace CRDB_Farmers
                     ErrorLabel.Visibility = Visibility.Visible;
                     return;
                 }
-
-
                 #endregion
 
+                #region Create MDB File (handle insert failures)
+                if (_comparisonResult.CommonData.Count > 0)
+                {
+                    MDBFile.CreateMDBFile(_comparisonResult.CommonData, savePath, "FarmersPatch", ref errorMessage);
+                    // أي failed insert أثناء MDB تم إضافته تلقائيًا داخل _comparisonResult
+                }
+                else
+                {
+                    LoadingBar.Visibility = Visibility.Collapsed;
+                    ErrorLabel.Content = "There isn't any matched data between two files";
+                    ErrorLabel.Visibility = Visibility.Visible;
+                    return;
+                }
+                #endregion
 
+                #region Parallel Image Processing (after MDB)
+                var excelDict = ExcelFileData
+                    .GroupBy(c => c.AccountNumber)
+                    .ToDictionary(g => g.Key, g => g.First());
 
-                #region create Report Missed Data 
+                var parallelOptions = new ParallelOptions
+                {
+                    MaxDegreeOfParallelism = Environment.ProcessorCount
+                };
 
+                await Task.Run(() =>
+                {
+                    Parallel.ForEach(_comparisonResult.CommonData, parallelOptions, item =>
+                    {
+                        if (!excelDict.TryGetValue(item.AccountNumber, out var excel))
+                            return;
+
+                        // Farmer Image
+                        if (!string.IsNullOrEmpty(excel.FarmerImage))
+                        {
+                            try
+                            {
+                                image.ForceConvertBase64ToPng(
+                                    excel.FarmerImage,
+                                    FarmerImagesPath,
+                                    item.AccountNumber,
+                                    ref errorMessage);
+                            }
+                            catch (Exception ex)
+                            {
+                                lock (_comparisonResult)
+                                {
+                                    _comparisonResult.AddExcelRecord(item.AccountNumber, $"Farmer image error: {ex.Message}");
+                                }
+                            }
+                        }
+                        else
+                        {
+                            lock (_comparisonResult)
+                            {
+                                _comparisonResult.AddExcelRecord(item.AccountNumber, "There isn't farmer image");
+                            }
+                        }
+
+                        // QR Code
+                        if (!string.IsNullOrEmpty(excel.QRCode))
+                        {
+                            try
+                            {
+                                image.ForceConvertBase64ToPng(
+                                    excel.QRCode,
+                                    QrCodeImagesPath,
+                                    item.AccountNumber,
+                                    ref errorMessage);
+                            }
+                            catch (Exception ex)
+                            {
+                                lock (_comparisonResult)
+                                {
+                                    _comparisonResult.AddExcelRecord(item.AccountNumber, $"QR code error: {ex.Message}");
+                                }
+                            }
+                        }
+                        else
+                        {
+                            lock (_comparisonResult)
+                            {
+                                _comparisonResult.AddExcelRecord(item.AccountNumber, "There isn't QR code image");
+                            }
+                        }
+                    });
+                });
+                #endregion
+
+                #region Create Excel Failed Report (all sources)
                 var combinedFailedRecords = new List<failedRecords>();
-
-                if (_comparisonResult.OnlyInOrFailedFromEmbossingFile.Count > 0)
-                {
-                    combinedFailedRecords.AddRange(_comparisonResult.OnlyInOrFailedFromEmbossingFile);
-                }
-
-                if (_comparisonResult.OnlyInOrFailedFromExcelFile.Count > 0)
-                {
-                    combinedFailedRecords.AddRange(_comparisonResult.OnlyInOrFailedFromExcelFile);
-                }
+                combinedFailedRecords.AddRange(_comparisonResult.OnlyInOrFailedFromEmbossingFile);
+                combinedFailedRecords.AddRange(_comparisonResult.OnlyInOrFailedFromExcelFile);
 
                 if (combinedFailedRecords.Count > 0)
                 {
@@ -258,35 +259,15 @@ namespace CRDB_Farmers
                 }
                 #endregion
 
-                #region CraeteMDPFile
-                if (_comparisonResult.CommonData.Count > 0)
-                {
-                    MDBFile.CreateMDBFile(_comparisonResult.CommonData, savePath, "FarmersPatch", ref errorMessage);
-                }
-                else
-                {
-                    errorMessage = "there isn't any matched data between two files ";
-                    LoadingBar.Visibility = Visibility.Collapsed;
-                    ErrorLabel.Content = errorMessage;
-                    ErrorLabel.Visibility = Visibility.Visible;
-                    return;
-                }
-                #endregion
-
                 LoadingBar.Visibility = Visibility.Collapsed;
                 processButton.IsEnabled = true;
-                SuccessLabel.Content = $"Operation completed successfully({_comparisonResult.CommonData.Count} records  are succeeded)!";
-
+                SuccessLabel.Content = $"Operation completed successfully ({_comparisonResult.CommonData.Count} records succeeded)!";
                 SuccessLabel.Visibility = Visibility.Visible;
-                
             }
-            #endregion
-
-          
         }
 
         #endregion
-
+        
 
         #region Code-Behind for Moving Window
         private void TitleBar_MouseDown(object sender, MouseButtonEventArgs e)

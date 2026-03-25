@@ -32,42 +32,84 @@ namespace CRDB_Farmers.Helper
 
             return dataTable;
         }
-
-        public static bool CreateMDBFile(List<FinalResultDto> records, string path, string tableName, ref string errorMessage)
+        public static List<failedRecords> CreateMDBFile(
+    List<FinalResultDto> records,
+    string path,
+    string tableName,
+    ref string errorMessage)
         {
+            var failed = new List<failedRecords>();
+
             try
             {
-                path = Path.Combine(path, $"{tableName}_{DateTime.Now.ToString("yyyyMMdd_HHmmss")}.mdb");
+                path = Path.Combine(path, $"{tableName}_{DateTime.Now:yyyyMMdd_HHmmss}.mdb");
 
-                // Convert list of T to DataTable
                 DataTable dataTable = ConvertListToDataTable(records);
 
                 DataBaseConfigModel config = new DataBaseConfigModel();
                 config.Table_fields = string.Join(",", dataTable.Columns.Cast<DataColumn>()
                     .Select(c => "IDW" + c.ColumnName));
+
                 config.FieldTypes = dataTable.Columns.Cast<DataColumn>()
                     .ToDictionary(c => "IDW" + c.ColumnName, c => GetAccessDataType(c.DataType));
-
 
                 config.DataBaseName = path;
                 config.TableName = tableName;
                 config.UNIQUE = -1;
 
                 database db = new database(config);
+
                 if (!db.Execute())
                 {
-                    errorMessage = "Couldn't create database file Error CreateMDBFile";
-                    return false;
+                    errorMessage = "Couldn't create database file";
+                    return failed;
                 }
-                InsertDataIntoAccess(records, path,tableName,ref errorMessage);
-                return true;
+
+                failed = InsertDataIntoAccess(records, path, tableName, ref errorMessage);
             }
             catch (Exception ex)
             {
-                errorMessage = $"{ex.ToString()} Error CreateMDBFile";
-                return false;
+                errorMessage = $"{ex.Message} Error CreateMDBFile";
             }
+
+            return failed;
         }
+
+        //public static bool CreateMDBFile(List<FinalResultDto> records, string path, string tableName, ref string errorMessage)
+        //{
+        //    try
+        //    {
+        //        path = Path.Combine(path, $"{tableName}_{DateTime.Now.ToString("yyyyMMdd_HHmmss")}.mdb");
+
+        //        // Convert list of T to DataTable
+        //        DataTable dataTable = ConvertListToDataTable(records);
+
+        //        DataBaseConfigModel config = new DataBaseConfigModel();
+        //        config.Table_fields = string.Join(",", dataTable.Columns.Cast<DataColumn>()
+        //            .Select(c => "IDW" + c.ColumnName));
+        //        config.FieldTypes = dataTable.Columns.Cast<DataColumn>()
+        //            .ToDictionary(c => "IDW" + c.ColumnName, c => GetAccessDataType(c.DataType));
+
+
+        //        config.DataBaseName = path;
+        //        config.TableName = tableName;
+        //        config.UNIQUE = -1;
+
+        //        database db = new database(config);
+        //        if (!db.Execute())
+        //        {
+        //            errorMessage = "Couldn't create database file Error CreateMDBFile";
+        //            return false;
+        //        }
+        //        InsertDataIntoAccess(records, path,tableName,ref errorMessage);
+        //        return true;
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        errorMessage = $"{ex.ToString()} Error CreateMDBFile";
+        //        return false;
+        //    }
+        //}
 
 
         private static string GetAccessDataType(Type type)
@@ -91,8 +133,61 @@ namespace CRDB_Farmers.Helper
             return "TEXT"; 
         }
 
-        public static bool InsertDataIntoAccess(List<FinalResultDto> records, string mdbFilePath, string tableName, ref string errorMessage)
+        //public static bool InsertDataIntoAccess(List<FinalResultDto> records, string mdbFilePath, string tableName, ref string errorMessage)
+        //{
+        //    try
+        //    {
+        //        string connectionString = $@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source={mdbFilePath};";
+
+        //        using (OleDbConnection conn = new OleDbConnection(connectionString))
+        //        {
+        //            conn.Open();
+
+        //            foreach (var record in records)
+        //            {
+        //                string query = $@"
+        //            INSERT INTO Cards (
+        //                IDWPAN, IDWEXP, IDWNAME, IDWCVV2, IDWTrack1, IDWTrack2, IDWchip, IDWFarmerNumber, IDWAccountNumber
+        //            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+
+        //                using (OleDbCommand cmd = new OleDbCommand(query, conn))
+        //                {
+        //                    cmd.Parameters.AddWithValue("@IDWPAN", record.PAN);
+        //                    cmd.Parameters.AddWithValue("@IDWEXP", record.EXP);
+        //                    cmd.Parameters.AddWithValue("@IDWNAME", record.NAME);
+        //                    cmd.Parameters.AddWithValue("@IDWCVV2", record.CVV2);
+        //                    cmd.Parameters.AddWithValue("@IDWTrack1", record.Track1);
+        //                    cmd.Parameters.AddWithValue("@IDWTrack2", record.Track2);
+        //                    //cmd.Parameters.Add("@chip", record.chip);
+        //                    var chipParam = cmd.Parameters.Add("IDWchip", OleDbType.LongVarBinary);
+        //                    chipParam.Value = record.chip ?? new byte[0];
+        //                    cmd.Parameters.AddWithValue("@IDWFarmerNumber", record.FarmerNumber);
+        //                    cmd.Parameters.AddWithValue("@IDWAccountNumber", record.AccountNumber);
+
+        //                    cmd.ExecuteNonQuery();
+        //                }
+        //            }
+
+        //            conn.Close();
+        //        }
+
+        //        return true;
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        errorMessage = $"Insert failed: {ex.Message}";
+        //        return false;
+        //    }
+        //}
+
+        public static List<failedRecords> InsertDataIntoAccess(
+     List<FinalResultDto> records,
+     string mdbFilePath,
+     string tableName,
+     ref string errorMessage)
         {
+            var failedList = new List<failedRecords>();
+
             try
             {
                 string connectionString = $@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source={mdbFilePath};";
@@ -103,41 +198,52 @@ namespace CRDB_Farmers.Helper
 
                     foreach (var record in records)
                     {
-                        string query = $@"
+                        try
+                        {
+                            string query = $@"
                     INSERT INTO Cards (
                         IDWPAN, IDWEXP, IDWNAME, IDWCVV2, IDWTrack1, IDWTrack2, IDWchip, IDWFarmerNumber, IDWAccountNumber
                     ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
-                        using (OleDbCommand cmd = new OleDbCommand(query, conn))
-                        {
-                            cmd.Parameters.AddWithValue("@IDWPAN", record.PAN);
-                            cmd.Parameters.AddWithValue("@IDWEXP", record.EXP);
-                            cmd.Parameters.AddWithValue("@IDWNAME", record.NAME);
-                            cmd.Parameters.AddWithValue("@IDWCVV2", record.CVV2);
-                            cmd.Parameters.AddWithValue("@IDWTrack1", record.Track1);
-                            cmd.Parameters.AddWithValue("@IDWTrack2", record.Track2);
-                            //cmd.Parameters.Add("@chip", record.chip);
-                            var chipParam = cmd.Parameters.Add("IDWchip", OleDbType.LongVarBinary);
-                            chipParam.Value = record.chip ?? new byte[0];
-                            cmd.Parameters.AddWithValue("@IDWFarmerNumber", record.FarmerNumber);
-                            cmd.Parameters.AddWithValue("@IDWAccountNumber", record.AccountNumber);
+                            using (OleDbCommand cmd = new OleDbCommand(query, conn))
+                            {
+                                cmd.Parameters.AddWithValue("@IDWPAN", record.PAN ?? "");
+                                cmd.Parameters.AddWithValue("@IDWEXP", record.EXP ?? "");
+                                cmd.Parameters.AddWithValue("@IDWNAME", record.NAME ?? "");
+                                cmd.Parameters.AddWithValue("@IDWCVV2", record.CVV2 ?? "");
+                                cmd.Parameters.AddWithValue("@IDWTrack1", record.Track1 ?? "");
+                                cmd.Parameters.AddWithValue("@IDWTrack2", record.Track2 ?? "");
 
-                            cmd.ExecuteNonQuery();
+                                var chipParam = cmd.Parameters.Add("IDWchip", OleDbType.LongVarBinary);
+                                chipParam.Value = record.chip ?? new byte[0];
+
+                                cmd.Parameters.AddWithValue("@IDWFarmerNumber", record.FarmerNumber ?? "");
+                                cmd.Parameters.AddWithValue("@IDWAccountNumber", record.AccountNumber ?? "");
+
+                                cmd.ExecuteNonQuery();
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            failedList.Add(new failedRecords
+                            {
+                                AccountNumber = record.AccountNumber,
+                                Reason = $"MDB Insert Error: {ex.Message}"
+                            });
+
+                            continue;
                         }
                     }
 
                     conn.Close();
                 }
-
-                return true;
             }
             catch (Exception ex)
             {
-                errorMessage = $"Insert failed: {ex.Message}";
-                return false;
+                errorMessage += $"General Insert Error: {ex.Message}";
             }
+
+            return failedList;
         }
-
-
     }
 }
