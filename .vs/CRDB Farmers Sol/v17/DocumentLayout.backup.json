@@ -3,11 +3,11 @@
   "WorkspaceRootPath": "C:\\Users\\b.zakaria\\Desktop\\New folder\\crdbfarmertoolcsvsupportversion\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3FB81F03-03AE-4871-87A4-F098BF4247B7}|CRDB Farmers\\CRDB Farmers.csproj|C:\\Users\\b.zakaria\\Desktop\\New folder\\crdbfarmertoolcsvsupportversion\\crdb farmers\\helper\\excel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3FB81F03-03AE-4871-87A4-F098BF4247B7}|CRDB Farmers\\CRDB Farmers.csproj|c:\\users\\b.zakaria\\desktop\\new folder\\crdbfarmertoolcsvsupportversion\\crdb farmers\\helper\\excel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3FB81F03-03AE-4871-87A4-F098BF4247B7}|CRDB Farmers\\CRDB Farmers.csproj|solutionrelative:crdb farmers\\helper\\excel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3FB81F03-03AE-4871-87A4-F098BF4247B7}|CRDB Farmers\\CRDB Farmers.csproj|c:\\users\\b.zakaria\\desktop\\new folder\\crdbfarmertoolcsvsupportversion\\crdb farmers\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3FB81F03-03AE-4871-87A4-F098BF4247B7}|CRDB Farmers\\CRDB Farmers.csproj|C:\\Users\\b.zakaria\\Desktop\\New folder\\crdbfarmertoolcsvsupportversion\\crdb farmers\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3FB81F03-03AE-4871-87A4-F098BF4247B7}|CRDB Farmers\\CRDB Farmers.csproj|solutionrelative:crdb farmers\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -74,8 +74,16 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 6,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
@@ -90,8 +98,7 @@
               "RelativeToolTip": "CRDB Farmers\\MainWindow.xaml.cs",
               "ViewState": "AgIAABYAAAAAAAAAAAA2wCgAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-06T06:16:34.05Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-06T06:16:34.05Z"
             },
             {
               "$type": "Document",
@@ -139,8 +146,7 @@
               "ToolTip": "C:\\Users\\b.zakaria\\Desktop\\New folder\\crdbfarmertoolcsvsupportversion\\CRDB Farmers\\MainWindow.xaml",
               "RelativeToolTip": "CRDB Farmers\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-08-04T16:20:44.534Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-04T16:20:44.534Z"
             },
             {
               "$type": "Document",
