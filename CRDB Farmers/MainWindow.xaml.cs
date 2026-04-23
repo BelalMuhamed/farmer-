@@ -3,6 +3,7 @@ using CRDB_Farmers.Helper;
 using ExcelDataReader.Log;
 using Microsoft.Win32;
 using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -159,22 +160,13 @@ namespace CRDB_Farmers
                 }
                 #endregion
 
-                #region Create MDB File (handle insert failures)
-                if (_comparisonResult.CommonData.Count > 0)
-                {
-                    MDBFile.CreateMDBFile(_comparisonResult.CommonData, savePath, "FarmersPatch", ref errorMessage);
-                    // أي failed insert أثناء MDB تم إضافته تلقائيًا داخل _comparisonResult
-                }
-                else
-                {
-                    LoadingBar.Visibility = Visibility.Collapsed;
-                    ErrorLabel.Content = "There isn't any matched data between two files";
-                    ErrorLabel.Visibility = Visibility.Visible;
-                    return;
-                }
-                #endregion
+
 
                 #region Parallel Image Processing (after MDB)
+
+               
+                var validRecords = new ConcurrentBag<FinalResultDto>();
+
                 var excelDict = ExcelFileData
                     .GroupBy(c => c.AccountNumber)
                     .ToDictionary(g => g.Key, g => g.First());
@@ -186,66 +178,65 @@ namespace CRDB_Farmers
 
                 await Task.Run(() =>
                 {
-                    Parallel.ForEach(_comparisonResult.CommonData, parallelOptions, item =>
+                    Parallel.ForEach(_comparisonResult.MatchedData, parallelOptions, item =>
                     {
                         if (!excelDict.TryGetValue(item.AccountNumber, out var excel))
                             return;
 
+                        bool farmerOk = false;
+                        bool qrOk = false;
+
                         // Farmer Image
-                        if (!string.IsNullOrEmpty(excel.FarmerImage))
-                        {
-                            try
-                            {
-                                image.ForceConvertBase64ToPng(
-                                    excel.FarmerImage,
-                                    FarmerImagesPath,
-                                    item.AccountNumber,
-                                    ref errorMessage);
-                            }
-                            catch (Exception ex)
-                            {
-                                lock (_comparisonResult)
-                                {
-                                    _comparisonResult.AddExcelRecord(item.AccountNumber, $"Farmer image error: {ex.Message}");
-                                }
-                            }
-                        }
-                        else
+                        farmerOk = image.ForceConvertBase64ToPng(
+                            excel.FarmerImage,
+                            FarmerImagesPath,
+                            item.AccountNumber,
+                            out string err1);
+
+                        if (!farmerOk)
                         {
                             lock (_comparisonResult)
                             {
-                                _comparisonResult.AddExcelRecord(item.AccountNumber, "There isn't farmer image");
+                                _comparisonResult.AddExcelRecord(item.AccountNumber, $"Farmer image error: {err1}");
                             }
                         }
 
                         // QR Code
-                        if (!string.IsNullOrEmpty(excel.QRCode))
-                        {
-                            try
-                            {
-                                image.ForceConvertBase64ToPng(
-                                    excel.QRCode,
-                                    QrCodeImagesPath,
-                                    item.AccountNumber,
-                                    ref errorMessage);
-                            }
-                            catch (Exception ex)
-                            {
-                                lock (_comparisonResult)
-                                {
-                                    _comparisonResult.AddExcelRecord(item.AccountNumber, $"QR code error: {ex.Message}");
-                                }
-                            }
-                        }
-                        else
+                        qrOk = image.ForceConvertBase64ToPng(
+                            excel.QRCode,
+                            QrCodeImagesPath,
+                            item.AccountNumber,
+                            out string err2);
+
+                        if (!qrOk)
                         {
                             lock (_comparisonResult)
                             {
-                                _comparisonResult.AddExcelRecord(item.AccountNumber, "There isn't QR code image");
+                                _comparisonResult.AddExcelRecord(item.AccountNumber, $"QR code error: {err2}");
                             }
+                        }
+
+                        // FINAL VALIDATION
+                        if (farmerOk && qrOk)
+                        {
+                            validRecords.Add(item);
                         }
                     });
                 });
+                #endregion
+
+                #region craete mdb file
+                if (validRecords.Count > 0)
+                {
+                    MDBFile.CreateMDBFile(validRecords.ToList(), savePath, "FarmersPatch", ref errorMessage);
+                }
+                else
+                {
+                    LoadingBar.Visibility = Visibility.Collapsed;
+                    ErrorLabel.Content = "No valid records after image validation!";
+                    ErrorLabel.Visibility = Visibility.Visible;
+                    return;
+                }
                 #endregion
 
                 #region Create Excel Failed Report (all sources)
@@ -257,11 +248,19 @@ namespace CRDB_Farmers
                 {
                     Excel.ExportListToExcel(combinedFailedRecords, savePath, "FailedData", ref errorMessage);
                 }
+                if (_comparisonResult.RepeatedAccounts.Count > 0)
+                {
+                    Excel.ExportListToExcel(
+                        _comparisonResult.RepeatedAccounts,
+                        savePath,
+                        "RepeatedAccounts",
+                        ref errorMessage);
+                }
                 #endregion
 
                 LoadingBar.Visibility = Visibility.Collapsed;
                 processButton.IsEnabled = true;
-                SuccessLabel.Content = $"Operation completed successfully ({_comparisonResult.CommonData.Count} records succeeded)!";
+                SuccessLabel.Content = $"Operation completed successfully ({_comparisonResult.MatchedData.Count} records succeeded)!";
                 SuccessLabel.Visibility = Visibility.Visible;
             }
         }

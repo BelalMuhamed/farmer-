@@ -106,3 +106,57 @@ C:\Users\b.zakaria\Desktop\New folder\crdbfarmertoolcsvsupportversion\CRDB Farme
 C:\Users\b.zakaria\Desktop\New folder\crdbfarmertoolcsvsupportversion\CRDB Farmers\obj\Debug\CRDB Far.F246ED96.Up2Date
 C:\Users\b.zakaria\Desktop\New folder\crdbfarmertoolcsvsupportversion\CRDB Farmers\obj\Debug\CRDB Farmers.exe
 C:\Users\b.zakaria\Desktop\New folder\crdbfarmertoolcsvsupportversion\CRDB Farmers\obj\Debug\CRDB Farmers.pdb
+C:\Users\b.zakaria\Desktop\crdb\crdbfarmertoolcsvsupportversion\CRDB Farmers\bin\Debug\CRDB Farmers.exe
+C:\Users\b.zakaria\Desktop\crdb\crdbfarmertoolcsvsupportversion\CRDB Farmers\bin\Debug\CRDB Farmers.exe.config
+C:\Users\b.zakaria\Desktop\crdb\crdbfarmertoolcsvsupportversion\CRDB Farmers\bin\Debug\ClosedXML.dll
+C:\Users\b.zakaria\Desktop\crdb\crdbfarmertoolcsvsupportversion\CRDB Farmers\bin\Debug\ClosedXML.Parser.dll
+C:\Users\b.zakaria\Desktop\crdb\crdbfarmertoolcsvsupportversion\CRDB Farmers\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\b.zakaria\Desktop\crdb\crdbfarmertoolcsvsupportversion\CRDB Farmers\bin\Debug\DocumentFormat.OpenXml.Framework.dll
+C:\Users\b.zakaria\Desktop\crdb\crdbfarmertoolcsvsupportversion\CRDB Farmers\bin\Debug\ExcelDataReader.DataSet.dll
+C:\Users\b.zakaria\Desktop\crdb\crdbfarmertoolcsvsupportversion\CRDB Farmers\bin\Debug\ExcelDataReader.dll
+C:\Users\b.zakaria\Desktop\crdb\crdbfarmertoolcsvsupportversion\CRDB Farmers\bin\Debug\ExcelNumberFormat.dll
+C:\Users\b.zakaria\Desktop\crdb\crdbfarmertoolcsvsupportversion\CRDB Farmers\bin\Debug\Microsoft.Bcl.HashCode.dll
+C:\Users\b.zakaria\Desktop\crdb\crdbfarmertoolcsvsupportversion\CRDB Farmers\bin\Debug\RBush.dll
+C:\Users\b.zakaria\Desktop\crdb\crdbfarmertoolcsvsupportversion\CRDB Farmers\bin\Debug\SixLabors.Fonts.dll
+C:\Users\b.zakaria\Desktop\crdb\crdbfarmertoolcsvsupportversion\CRDB Farmers\bin\Debug\System.Buffers.dll
+C:\Users\b.zakaria\Desktop\crdb\crdbfarmertoolcsvsupportversion\CRDB Farmers\bin\Debug\System.Drawing.Common.dll
+C:\Users\b.zakaria\Desktop\crdb\crdbfarmertoolcsvsupportversion\CRDB Farmers\bin\Debug\System.Memory.dll
+C:\Users\b.zakaria\Desktop\crdb\crdbfarmertoolcsvsupportversion\CRDB Farmers\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\b.zakaria\Desktop\crdb\crdbfarmertoolcsvsupportversion\CRDB Farmers\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\b.zakaria\Desktop\crdb\crdbfarmertoolcsvsupportversion\CRDB Farmers\bin\Debug\System.Text.Encoding.CodePages.dll
+C:\Users\b.zakaria\Desktop\crdb\crdbfarmertoolcsvsupportversion\CRDB Farmers\bin\Debug\ClosedXML.pdb
+C:\Users\b.zakaria\Desktop\crdb\crdbfarmertoolcsvsupportversion\CRDB Farmers\bin\Debug\ClosedXML.xml
+C:\Users\b.zakaria\Desktop\crdb\crdbfarmertoolcsvsupportversion\CRDB Farmers\bin\Debug\ClosedXML.Parser.xml
+C:\Users\b.zakaria\Desktop\crdb\crdbfarmertoolcsvsupportversion\CRDB Farmers\bin\Debug\DocumentFormat.OpenXml.xml
+C:\Users\b.zakaria\Desktop\crdb\crdbfarmertoolcsvsupportversion\CRDB Farmers\bin\Debug\DocumentFormat.OpenXml.Framework.xml
+C:\Users\b.zakaria\Desktop\crdb\crdbfarmertoolcsvsupportversion\CRDB Farmers\bin\Debug\ExcelDataReader.pdb
+C:\Users\b.zakaria\Desktop\crdb\crdbfarmertoolcsvsupportversion\CRDB Farmers\bin\Debug\ExcelDataReader.xml
+C:\Users\b.zakaria\Desktop\crdb\crdbfarmertoolcsvsupportversion\CRDB Farmers\bin\Debug\ExcelDataReader.DataSet.pdb
+C:\Users\b.zakaria\Desktop\crdb\crdbfarmertoolcsvsupportversion\CRDB Farmers\bin\Debug\ExcelDataReader.DataSet.xml
+C:\Users\b.zakaria\Desktop\crdb\crdbfarmertoolcsvsupportversion\CRDB Farmers\bin\Debug\ExcelNumberFormat.xml
+C:\Users\b.zakaria\Desktop\crdb\crdbfarmertoolcsvsupportversion\CRDB Farmers\bin\Debug\Microsoft.Bcl.HashCode.xml
+C:\Users\b.zakaria\Desktop\crdb\crdbfarmertoolcsvsupportversion\CRDB Farmers\bin\Debug\RBush.xml
+C:\Users\b.zakaria\Desktop\crdb\crdbfarmertoolcsvsupportversion\CRDB Farmers\bin\Debug\SixLabors.Fonts.xml
+C:\Users\b.zakaria\Desktop\crdb\crdbfarmertoolcsvsupportversion\CRDB Farmers\bin\Debug\System.Buffers.xml
+C:\Users\b.zakaria\Desktop\crdb\crdbfarmertoolcsvsupportversion\CRDB Farmers\bin\Debug\System.Drawing.Common.pdb
+C:\Users\b.zakaria\Desktop\crdb\crdbfarmertoolcsvsupportversion\CRDB Farmers\bin\Debug\System.Drawing.Common.xml
+C:\Users\b.zakaria\Desktop\crdb\crdbfarmertoolcsvsupportversion\CRDB Farmers\bin\Debug\System.Memory.xml
+C:\Users\b.zakaria\Desktop\crdb\crdbfarmertoolcsvsupportversion\CRDB Farmers\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\b.zakaria\Desktop\crdb\crdbfarmertoolcsvsupportversion\CRDB Farmers\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\b.zakaria\Desktop\crdb\crdbfarmertoolcsvsupportversion\CRDB Farmers\bin\Debug\System.Text.Encoding.CodePages.xml
+C:\Users\b.zakaria\Desktop\crdb\crdbfarmertoolcsvsupportversion\CRDB Farmers\obj\Debug\CRDB Farmers.csproj.AssemblyReference.cache
+C:\Users\b.zakaria\Desktop\crdb\crdbfarmertoolcsvsupportversion\CRDB Farmers\obj\Debug\CRDB Farmers.csproj.SuggestedBindingRedirects.cache
+C:\Users\b.zakaria\Desktop\crdb\crdbfarmertoolcsvsupportversion\CRDB Farmers\obj\Debug\CRDB Farmers.exe.config
+C:\Users\b.zakaria\Desktop\crdb\crdbfarmertoolcsvsupportversion\CRDB Farmers\obj\Debug\CRDB Farmers.csproj.ResolveComReference.cache
+C:\Users\b.zakaria\Desktop\crdb\crdbfarmertoolcsvsupportversion\CRDB Farmers\obj\Debug\MainWindow.baml
+C:\Users\b.zakaria\Desktop\crdb\crdbfarmertoolcsvsupportversion\CRDB Farmers\obj\Debug\MainWindow.g.cs
+C:\Users\b.zakaria\Desktop\crdb\crdbfarmertoolcsvsupportversion\CRDB Farmers\obj\Debug\App.g.cs
+C:\Users\b.zakaria\Desktop\crdb\crdbfarmertoolcsvsupportversion\CRDB Farmers\obj\Debug\CRDB Farmers_MarkupCompile.cache
+C:\Users\b.zakaria\Desktop\crdb\crdbfarmertoolcsvsupportversion\CRDB Farmers\obj\Debug\CRDB Farmers.g.resources
+C:\Users\b.zakaria\Desktop\crdb\crdbfarmertoolcsvsupportversion\CRDB Farmers\obj\Debug\CRDB_Farmers.Properties.Resources.resources
+C:\Users\b.zakaria\Desktop\crdb\crdbfarmertoolcsvsupportversion\CRDB Farmers\obj\Debug\CRDB Farmers.csproj.GenerateResource.cache
+C:\Users\b.zakaria\Desktop\crdb\crdbfarmertoolcsvsupportversion\CRDB Farmers\obj\Debug\CRDB Farmers.csproj.CoreCompileInputs.cache
+C:\Users\b.zakaria\Desktop\crdb\crdbfarmertoolcsvsupportversion\CRDB Farmers\obj\Debug\CRDB Far.F246ED96.Up2Date
+C:\Users\b.zakaria\Desktop\crdb\crdbfarmertoolcsvsupportversion\CRDB Farmers\obj\Debug\CRDB Farmers.exe
+C:\Users\b.zakaria\Desktop\crdb\crdbfarmertoolcsvsupportversion\CRDB Farmers\obj\Debug\CRDB Farmers.pdb
+C:\Users\b.zakaria\Desktop\crdb\crdbfarmertoolcsvsupportversion\CRDB Farmers\bin\Debug\CRDB Farmers.pdb

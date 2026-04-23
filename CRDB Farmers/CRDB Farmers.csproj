@@ -140,6 +140,7 @@
     <Compile Include="DTos\DataComparisonResult.cs" />
     <Compile Include="DTos\EmbossingDto.cs" />
     <Compile Include="DTos\ExcelDto.cs" />
+    <Compile Include="DTos\RepeatedAccountReportDto.cs" />
     <Compile Include="Helper\Excel.cs" />
     <Compile Include="Helper\EmbossingFile.cs" />
     <Compile Include="Helper\Folder.cs" />
