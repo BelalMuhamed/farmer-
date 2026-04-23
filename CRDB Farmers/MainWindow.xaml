@@ -88,7 +88,7 @@
                     <Button Content="✕" Style="{StaticResource TitleBarButtonStyle}" Background="Red" Click="Close_Click" ToolTip="Close"/>
                 </StackPanel>
 
-                <TextBlock Text="CRDB Farmer CSV v03" 
+                <TextBlock Text="CRDB Farmer CSV v05(Generate Repeated Report)" 
                Foreground="White" 
                FontWeight="Bold" 
                FontSize="18" 

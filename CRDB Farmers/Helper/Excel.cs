@@ -16,66 +16,7 @@ namespace CRDB_Farmers
     public static class Excel
     {
 
-        //public static List<T> ReadExcelAsList<T>(string filePath) where T : new()
-        //{
-        //    var list = new List<T>();
-
-        //    System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance); 
-
-        //     var stream = File.Open(filePath, FileMode.Open, FileAccess.Read);
-        //     var reader = ExcelReaderFactory.CreateReader(stream);
-
-        //    bool isFirstRow = true;
-        //    string[] headers = null;
-
-        //    var props = typeof(T).GetProperties(BindingFlags.Public | BindingFlags.Instance);
-        //    var propMap = props.ToDictionary(
-        //        p => p.GetCustomAttribute<DisplayNameAttribute>()?.DisplayName?.Trim().ToLower() ?? p.Name.Trim().ToLower(),
-        //        p => p
-        //    );
-
-        //    while (reader.Read())
-        //    {
-        //        if (isFirstRow)
-        //        {
-        //            headers = new string[reader.FieldCount];
-        //            for (int i = 0; i < reader.FieldCount; i++)
-        //            {
-        //                headers[i] = reader.GetString(i)?.Trim().ToLower();
-        //            }
-
-        //            isFirstRow = false;
-        //            continue;
-        //        }
-
-        //        T obj = new T();
-
-        //        for (int i = 0; i < reader.FieldCount; i++)
-        //        {
-        //            if (i >= headers.Length || string.IsNullOrWhiteSpace(headers[i])) continue;
-
-        //            if (propMap.TryGetValue(headers[i], out PropertyInfo prop))
-        //            {
-        //                try
-        //                {
-        //                    if (!reader.IsDBNull(i))
-        //                    {
-        //                        object value = Convert.ChangeType(reader.GetValue(i), prop.PropertyType);
-        //                        prop.SetValue(obj, value);
-        //                    }
-        //                }
-        //                catch
-        //                {
-
-        //                }
-        //            }
-        //        }
-
-        //        list.Add(obj);
-        //    }
-
-        //    return list;
-        //}
+      
         public static List<T> ReadExcelAsList<T>(string filePath) where T : new()
         {
             var list = new List<T>();
