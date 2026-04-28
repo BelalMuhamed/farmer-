@@ -3,24 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\b.zakaria\\Desktop\\crdb\\crdbfarmertoolcsvsupportversion\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{3FB81F03-03AE-4871-87A4-F098BF4247B7}|CRDB Farmers\\CRDB Farmers.csproj|c:\\users\\b.zakaria\\desktop\\crdb\\crdbfarmertoolcsvsupportversion\\crdb farmers\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FB81F03-03AE-4871-87A4-F098BF4247B7}|CRDB Farmers\\CRDB Farmers.csproj|solutionrelative:crdb farmers\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{3FB81F03-03AE-4871-87A4-F098BF4247B7}|CRDB Farmers\\CRDB Farmers.csproj|C:\\Users\\b.zakaria\\Desktop\\crdb\\crdbfarmertoolcsvsupportversion\\crdb farmers\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{3FB81F03-03AE-4871-87A4-F098BF4247B7}|CRDB Farmers\\CRDB Farmers.csproj|solutionrelative:crdb farmers\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3FB81F03-03AE-4871-87A4-F098BF4247B7}|CRDB Farmers\\CRDB Farmers.csproj|c:\\users\\b.zakaria\\desktop\\crdb\\crdbfarmertoolcsvsupportversion\\crdb farmers\\helper\\processfilesdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3FB81F03-03AE-4871-87A4-F098BF4247B7}|CRDB Farmers\\CRDB Farmers.csproj|C:\\Users\\b.zakaria\\Desktop\\crdb\\crdbfarmertoolcsvsupportversion\\crdb farmers\\dtos\\datacomparisonresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FB81F03-03AE-4871-87A4-F098BF4247B7}|CRDB Farmers\\CRDB Farmers.csproj|solutionrelative:crdb farmers\\dtos\\datacomparisonresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FB81F03-03AE-4871-87A4-F098BF4247B7}|CRDB Farmers\\CRDB Farmers.csproj|C:\\Users\\b.zakaria\\Desktop\\crdb\\crdbfarmertoolcsvsupportversion\\crdb farmers\\helper\\processfilesdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3FB81F03-03AE-4871-87A4-F098BF4247B7}|CRDB Farmers\\CRDB Farmers.csproj|solutionrelative:crdb farmers\\helper\\processfilesdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3FB81F03-03AE-4871-87A4-F098BF4247B7}|CRDB Farmers\\CRDB Farmers.csproj|C:\\Users\\b.zakaria\\Desktop\\crdb\\crdbfarmertoolcsvsupportversion\\crdb farmers\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3FB81F03-03AE-4871-87A4-F098BF4247B7}|CRDB Farmers\\CRDB Farmers.csproj|solutionrelative:crdb farmers\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3FB81F03-03AE-4871-87A4-F098BF4247B7}|CRDB Farmers\\CRDB Farmers.csproj|c:\\users\\b.zakaria\\desktop\\crdb\\crdbfarmertoolcsvsupportversion\\crdb farmers\\dtos\\repeatedaccountreportdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3FB81F03-03AE-4871-87A4-F098BF4247B7}|CRDB Farmers\\CRDB Farmers.csproj|C:\\Users\\b.zakaria\\Desktop\\crdb\\crdbfarmertoolcsvsupportversion\\crdb farmers\\dtos\\repeatedaccountreportdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3FB81F03-03AE-4871-87A4-F098BF4247B7}|CRDB Farmers\\CRDB Farmers.csproj|solutionrelative:crdb farmers\\dtos\\repeatedaccountreportdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3FB81F03-03AE-4871-87A4-F098BF4247B7}|CRDB Farmers\\CRDB Farmers.csproj|C:\\Users\\b.zakaria\\Desktop\\crdb\\crdbfarmertoolcsvsupportversion\\crdb farmers\\dtos\\datacomparisonresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3FB81F03-03AE-4871-87A4-F098BF4247B7}|CRDB Farmers\\CRDB Farmers.csproj|solutionrelative:crdb farmers\\dtos\\datacomparisonresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3FB81F03-03AE-4871-87A4-F098BF4247B7}|CRDB Farmers\\CRDB Farmers.csproj|C:\\Users\\b.zakaria\\Desktop\\crdb\\crdbfarmertoolcsvsupportversion\\crdb farmers\\dtos\\failedrecords.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -78,46 +78,67 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "RepeatedAccountReportDto.cs",
-              "DocumentMoniker": "C:\\Users\\b.zakaria\\Desktop\\crdb\\crdbfarmertoolcsvsupportversion\\CRDB Farmers\\DTos\\RepeatedAccountReportDto.cs",
-              "RelativeDocumentMoniker": "CRDB Farmers\\DTos\\RepeatedAccountReportDto.cs",
-              "ToolTip": "C:\\Users\\b.zakaria\\Desktop\\crdb\\crdbfarmertoolcsvsupportversion\\CRDB Farmers\\DTos\\RepeatedAccountReportDto.cs",
-              "RelativeToolTip": "CRDB Farmers\\DTos\\RepeatedAccountReportDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAArAAAAAAAAAA==",
+              "Title": "ProcessFilesData.cs",
+              "DocumentMoniker": "C:\\Users\\b.zakaria\\Desktop\\crdb\\crdbfarmertoolcsvsupportversion\\CRDB Farmers\\Helper\\ProcessFilesData.cs",
+              "RelativeDocumentMoniker": "CRDB Farmers\\Helper\\ProcessFilesData.cs",
+              "ToolTip": "C:\\Users\\b.zakaria\\Desktop\\crdb\\crdbfarmertoolcsvsupportversion\\CRDB Farmers\\Helper\\ProcessFilesData.cs",
+              "RelativeToolTip": "CRDB Farmers\\Helper\\ProcessFilesData.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAtwC8AAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-23T10:10:35.529Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-06T08:41:24.221Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "DataComparisonResult.cs",
+              "DocumentMoniker": "C:\\Users\\b.zakaria\\Desktop\\crdb\\crdbfarmertoolcsvsupportversion\\CRDB Farmers\\DTos\\DataComparisonResult.cs",
+              "RelativeDocumentMoniker": "CRDB Farmers\\DTos\\DataComparisonResult.cs",
+              "ToolTip": "C:\\Users\\b.zakaria\\Desktop\\crdb\\crdbfarmertoolcsvsupportversion\\CRDB Farmers\\DTos\\DataComparisonResult.cs",
+              "RelativeToolTip": "CRDB Farmers\\DTos\\DataComparisonResult.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAApwCYAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-06T08:41:24.317Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\b.zakaria\\Desktop\\crdb\\crdbfarmertoolcsvsupportversion\\CRDB Farmers\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "CRDB Farmers\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\b.zakaria\\Desktop\\crdb\\crdbfarmertoolcsvsupportversion\\CRDB Farmers\\MainWindow.xaml",
+              "RelativeToolTip": "CRDB Farmers\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-08-04T16:20:44.534Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\b.zakaria\\Desktop\\crdb\\crdbfarmertoolcsvsupportversion\\CRDB Farmers\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "CRDB Farmers\\MainWindow.xaml.cs",
               "ToolTip": "C:\\Users\\b.zakaria\\Desktop\\crdb\\crdbfarmertoolcsvsupportversion\\CRDB Farmers\\MainWindow.xaml.cs",
               "RelativeToolTip": "CRDB Farmers\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAJ8AAAAAAAAAAAAAAAEBAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAH8AAAAAAAAAAAAowPsAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-06T06:16:34.05Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Excel.cs",
-              "DocumentMoniker": "C:\\Users\\b.zakaria\\Desktop\\crdb\\crdbfarmertoolcsvsupportversion\\CRDB Farmers\\Helper\\Excel.cs",
-              "RelativeDocumentMoniker": "CRDB Farmers\\Helper\\Excel.cs",
-              "ToolTip": "C:\\Users\\b.zakaria\\Desktop\\crdb\\crdbfarmertoolcsvsupportversion\\CRDB Farmers\\Helper\\Excel.cs",
-              "RelativeToolTip": "CRDB Farmers\\Helper\\Excel.cs",
-              "ViewState": "AgIAADwAAAAAAAAAAAAAAEsAAAAIAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "RepeatedAccountReportDto.cs",
+              "DocumentMoniker": "C:\\Users\\b.zakaria\\Desktop\\crdb\\crdbfarmertoolcsvsupportversion\\CRDB Farmers\\DTos\\RepeatedAccountReportDto.cs",
+              "RelativeDocumentMoniker": "CRDB Farmers\\DTos\\RepeatedAccountReportDto.cs",
+              "ToolTip": "C:\\Users\\b.zakaria\\Desktop\\crdb\\crdbfarmertoolcsvsupportversion\\CRDB Farmers\\DTos\\RepeatedAccountReportDto.cs",
+              "RelativeToolTip": "CRDB Farmers\\DTos\\RepeatedAccountReportDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwA0AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-06T11:42:43.687Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-23T10:10:35.529Z"
             },
             {
               "$type": "Document",
@@ -127,36 +148,9 @@
               "RelativeDocumentMoniker": "CRDB Farmers\\DTos\\failedRecords.cs",
               "ToolTip": "C:\\Users\\b.zakaria\\Desktop\\crdb\\crdbfarmertoolcsvsupportversion\\CRDB Farmers\\DTos\\failedRecords.cs",
               "RelativeToolTip": "CRDB Farmers\\DTos\\failedRecords.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-13T06:15:10.926Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ProcessFilesData.cs",
-              "DocumentMoniker": "C:\\Users\\b.zakaria\\Desktop\\crdb\\crdbfarmertoolcsvsupportversion\\CRDB Farmers\\Helper\\ProcessFilesData.cs",
-              "RelativeDocumentMoniker": "CRDB Farmers\\Helper\\ProcessFilesData.cs",
-              "ToolTip": "C:\\Users\\b.zakaria\\Desktop\\crdb\\crdbfarmertoolcsvsupportversion\\CRDB Farmers\\Helper\\ProcessFilesData.cs",
-              "RelativeToolTip": "CRDB Farmers\\Helper\\ProcessFilesData.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAkwDcAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-06T08:41:24.221Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "DataComparisonResult.cs",
-              "DocumentMoniker": "C:\\Users\\b.zakaria\\Desktop\\crdb\\crdbfarmertoolcsvsupportversion\\CRDB Farmers\\DTos\\DataComparisonResult.cs",
-              "RelativeDocumentMoniker": "CRDB Farmers\\DTos\\DataComparisonResult.cs",
-              "ToolTip": "C:\\Users\\b.zakaria\\Desktop\\crdb\\crdbfarmertoolcsvsupportversion\\CRDB Farmers\\DTos\\DataComparisonResult.cs",
-              "RelativeToolTip": "CRDB Farmers\\DTos\\DataComparisonResult.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAD4vyYAAAA+AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-06T08:41:24.317Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-13T06:15:10.926Z"
             },
             {
               "$type": "Document",
@@ -172,6 +166,18 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Excel.cs",
+              "DocumentMoniker": "C:\\Users\\b.zakaria\\Desktop\\crdb\\crdbfarmertoolcsvsupportversion\\CRDB Farmers\\Helper\\Excel.cs",
+              "RelativeDocumentMoniker": "CRDB Farmers\\Helper\\Excel.cs",
+              "ToolTip": "C:\\Users\\b.zakaria\\Desktop\\crdb\\crdbfarmertoolcsvsupportversion\\CRDB Farmers\\Helper\\Excel.cs",
+              "RelativeToolTip": "CRDB Farmers\\Helper\\Excel.cs",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAAEsAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-06T11:42:43.687Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 7,
               "Title": "ExcelDto.cs",
               "DocumentMoniker": "C:\\Users\\b.zakaria\\Desktop\\crdb\\crdbfarmertoolcsvsupportversion\\CRDB Farmers\\DTos\\ExcelDto.cs",
@@ -180,20 +186,7 @@
               "RelativeToolTip": "CRDB Farmers\\DTos\\ExcelDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-06T08:41:24.253Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\b.zakaria\\Desktop\\crdb\\crdbfarmertoolcsvsupportversion\\CRDB Farmers\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "CRDB Farmers\\MainWindow.xaml",
-              "ToolTip": "C:\\Users\\b.zakaria\\Desktop\\crdb\\crdbfarmertoolcsvsupportversion\\CRDB Farmers\\MainWindow.xaml",
-              "RelativeToolTip": "CRDB Farmers\\MainWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-08-04T16:20:44.534Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-06T08:41:24.253Z"
             },
             {
               "$type": "Document",
