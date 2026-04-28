@@ -90,7 +90,76 @@ Show your appreciation to those who have contributed to the project.
 For open source projects, say how it is licensed.
 
 ## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
-.vs/
-bin/
-obj/
+📄 Data Comparison & Matching Engine (Embossing vs Excel)
+📌 Overview
+This module is responsible for comparing two datasets:
+•	🏭 Embossing File Data
+•	📊 Excel File Data
+The system performs:
+•	Matching using AccountNumber
+•	Duplicate detection
+•	Failure tracking
+•	Unified reporting output
+________________________________________
+⚙️ Core Processing Flow
+1️⃣ Data Validation & Normalization
+Before processing:
+•	Empty or whitespace AccountNumber values are removed
+•	Data is grouped by AccountNumber
+________________________________________
+2️⃣ Duplicate Detection (Strict Rule)
+An account is considered INVALID for matching if it appears more than once in:
+•	Excel file
+•	OR Embossing file
+📌 Behavior
+•	❌ Duplicate accounts are excluded from matching
+•	📌 They are only stored in RepeatedAccounts
+________________________________________
+3️⃣ Repeated Accounts Report
+DTO
+public class RepeatedAccountReportDto
+{
+    public string AccountNumber { get; set; }
+    public string Source { get; set; }
+    public int Count { get; set; }
+}
+Output Contains
+•	AccountNumber
+•	Source (Excel / Embossing)
+•	Count of occurrences
+________________________________________
+4️⃣ Failed Records Tracking
+DTO
+internal class failedRecords
+{
+    public string AccountNumber { get; set; }
+    public string Reason { get; set; }
+    public string From { get; set; }
+}
+Includes
+•	Missing in Excel
+•	Missing in Embossing
+•	Invalid due to duplication (converted from repeated accounts)
+________________________________________
+5️⃣ Matching Logic
+Matching is performed ONLY on clean data (non-duplicated accounts).
+Condition
+•	AccountNumber must exist in both datasets
+•	Must NOT be duplicated in either file
+Result
+MatchedData
+Contains merged data from both sources.
+________________________________________
+🧠 Business Rules Summary
+Condition	Result
+Unique in both files	✅ Matched
+Missing in Excel	❌ Failed record
+Missing in Embossing	❌ Failed record
+Duplicate in any file	🚫 Excluded from matching
+Duplicate accounts	📌 Only in RepeatedAccounts
+________________________________________
+📦 Final Output Structure
+1-FarmerImages(folder contain farmer images named by account number )
+2-QrCodeImages(folder contain farmer qr images  named by account number)
+3-FailedData (excel failed report )
+4-mdb contain the merged success data 

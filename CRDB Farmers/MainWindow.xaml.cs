@@ -243,19 +243,23 @@ namespace CRDB_Farmers
                 var combinedFailedRecords = new List<failedRecords>();
                 combinedFailedRecords.AddRange(_comparisonResult.OnlyInOrFailedFromEmbossingFile);
                 combinedFailedRecords.AddRange(_comparisonResult.OnlyInOrFailedFromExcelFile);
-
+                if (_comparisonResult.RepeatedAccounts.Count > 0)
+                {
+                                var repeatedAsFailedRecords = _comparisonResult.RepeatedAccounts
+                .Select(x => new failedRecords
+                {
+                    AccountNumber = x.AccountNumber,
+                    Reason = $"Duplicate account detected - Count: {x.Count}",
+                    From = x.Source
+                })
+                .ToList();
+                    combinedFailedRecords.AddRange(repeatedAsFailedRecords);
+                }
                 if (combinedFailedRecords.Count > 0)
                 {
                     Excel.ExportListToExcel(combinedFailedRecords, savePath, "FailedData", ref errorMessage);
                 }
-                if (_comparisonResult.RepeatedAccounts.Count > 0)
-                {
-                    Excel.ExportListToExcel(
-                        _comparisonResult.RepeatedAccounts,
-                        savePath,
-                        "RepeatedAccounts",
-                        ref errorMessage);
-                }
+              
                 #endregion
 
                 LoadingBar.Visibility = Visibility.Collapsed;
